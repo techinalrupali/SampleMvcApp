@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "GetAllEmployee";
+}
+
+<h2>Get All Employee Details</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Company</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (SampleMvcApp.Models.Employee employee in ViewBag.EmployeeList)
+        {
+            <tr>
+                <td>@employee.Id</td>
+                <td>@employee.Name</td>
+                <td>@employee.Company</td>
+                <td>@employee.Salary</td>
+            </tr>
+        }
+    </tbody>
+</table>
